@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-fte@y2qeea+ft%=9b+j&0k6elvy^i0-sio2$&+k#k_(pqqxk2x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['maxfancheak.pythonanywhere.com',
+    '127.0.0.1',
+    'localhost',]
 
 
 # Application definition
