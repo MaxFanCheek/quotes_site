@@ -1,0 +1,12 @@
+<h2>{{ quote.source }}</h2>
+<blockquote>"{{ quote.text }}"</blockquote>
+
+<form method="post">{% csrf_token %}
+  <button name="like">👍</button>
+  <button name="dislike">👎</button>
+</form>
+
+<p>Просмотров: {{ quote.views }} |
+   Рейтинг: {{ quote.likes|add:quote.dislikes|floatformat:0 }}</p>
+<a href="{% url 'random' %}">Другая цитата</a> |
+<a href="{% url 'top' %}">Топ-10</a>

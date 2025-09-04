@@ -1,0 +1,5 @@
+<h1>Популярные цитаты</h1>
+{% for q in quotes %}
+  <p>{{ forloop.counter }}. "{{ q.text }}" — {{ q.source }}
+     (рейтинг {{ q.score }})</p>
+{% empty %} <p>Нет цитат.</p>{% endfor %}
